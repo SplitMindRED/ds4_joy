@@ -1,0 +1,10 @@
+<launch>
+   <arg name="number_of_robots" default="1"/>
+
+   <node name = "joy1" pkg = "joy" type = "joy_node" output = "screen"/>
+
+   <node name = "ds4" pkg = "ds4_joy" type = "ds4_control" output = "screen">
+      <param name="number_of_robots" value="$(arg number_of_robots)"/>
+   </node> 
+
+</launch>
